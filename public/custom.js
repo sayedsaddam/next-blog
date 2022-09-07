@@ -1,0 +1,1 @@
+console.log('Hello from custom.js in head section, using the NextJS Script component...');
