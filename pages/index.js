@@ -1,6 +1,6 @@
 import Head from 'next/head'
 import Image from 'next/image'
-import Script from 'next/script'
+import Link from 'next/link'
 import styles from '../styles/Home.module.css'
 
 export default function Home() {
@@ -12,44 +12,38 @@ export default function Home() {
         <meta name='keywords' content='nextjsblog, blog by saddam, build with next, next, nextjs, next framework' />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <Script src='custom.js' strategy='lazyOnload'></Script>
+      {/* <Script src='custom.js' strategy='lazyOnload'></Script> */}
+      <nav className={styles.mainnav}>
+        <ul>
+          <Link href="/"><li><a href="">Home</a></li></Link>
+          <Link href="/about"><li><a href="">About</a></li></Link>
+          <Link href="/blog"><li><a href="">Blog</a></li></Link>
+          <Link href="/contact"><li><a href="">Contact</a></li></Link>
+        </ul>
+      </nav>
       <main className={styles.main}>
         <h1 className={styles.title}>
-          Welcome to NextJS Blog
+          Stacklag
         </h1>
 
         <p className={styles.description}>
           A blog being built in NextJS
         </p>
 
-        <div className={styles.grid}>
-          <a href="https://nextjs.org/docs" className={styles.card}>
-            <h2>Documentation &rarr;</h2>
-            <p>Find in-depth information about Next.js features and API.</p>
-          </a>
-
-          <a href="https://nextjs.org/learn" className={styles.card}>
-            <h2>Learn &rarr;</h2>
-            <p>Learn about Next.js in an interactive course with quizzes!</p>
-          </a>
-
-          <a
-            href="https://github.com/vercel/next.js/tree/canary/examples"
-            className={styles.card}
-          >
-            <h2>Examples &rarr;</h2>
-            <p>Discover and deploy boilerplate example Next.js projects.</p>
-          </a>
-
-          <a
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            className={styles.card}
-          >
-            <h2>Deploy &rarr;</h2>
-            <p>
-              Instantly deploy your Next.js site to a public URL with Vercel.
-            </p>
-          </a>
+        <div className="blogs">
+          <h2>Popular blogs</h2>
+          <div className="blogItem">
+            <h3>How to learn Javascript in 2022</h3>
+            <p>Some content for the blog built with Next JS.</p>
+          </div>
+          <div className="blogItem">
+            <h3>How to learn Javascript in 2022</h3>
+            <p>Some content for the blog built with Next JS.</p>
+          </div>
+          <div className="blogItem">
+            <h3>How to learn Javascript in 2022</h3>
+            <p>Some content for the blog built with Next JS.</p>
+          </div>
         </div>
       </main>
 
