@@ -4,6 +4,7 @@ import Link from 'next/link'
 import styles from '../styles/Home.module.css'
 
 export default function Home() {
+  console.log(styles);
   return (
     <div className={styles.container}>
       <Head>
@@ -15,10 +16,10 @@ export default function Home() {
       {/* <Script src='custom.js' strategy='lazyOnload'></Script> */}
       <nav className={styles.mainnav}>
         <ul>
-          <Link href="/"><li><a href="">Home</a></li></Link>
-          <Link href="/about"><li><a href="">About</a></li></Link>
-          <Link href="/blog"><li><a href="">Blog</a></li></Link>
-          <Link href="/contact"><li><a href="">Contact</a></li></Link>
+          <Link href="/" passHref><li><a href="">Home</a></li></Link>
+          <Link href="/about" passHref><li><a href="">About</a></li></Link>
+          <Link href="/blog" passHref><li><a href="">Blog</a></li></Link>
+          <Link href="/contact" passHref><li><a href="">Contact</a></li></Link>
         </ul>
       </nav>
       <main className={styles.main}>
