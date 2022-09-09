@@ -1,7 +1,6 @@
 import Head from 'next/head'
 import Image from 'next/image'
 import styles from '../styles/Home.module.css'
-import Navbar from '../components/navbar'
 
 export default function Home() {
   return (
@@ -14,9 +13,6 @@ export default function Home() {
           h3{
             font-size: 28px;
           }
-          ul li{
-            cursor: pointer;
-          }
         `}
       </style>
       <Head>
@@ -25,7 +21,6 @@ export default function Home() {
         <meta name='keywords' content='nextjsblog, blog by saddam, build with next, next, nextjs, next framework' />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <Navbar />
       <main className={styles.main}>
         <h1 className={styles.title}>
           Stacklag
