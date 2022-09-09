@@ -22,6 +22,7 @@ const slug = () => {
       <div className={styles.container}>
          <main className={styles.main}>
             <h1>{blog && blog.title}</h1>
+            <small>{blog && blog.author}</small>
             <hr />
             <div>
                {blog && blog.content}
