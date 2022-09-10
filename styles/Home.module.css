@@ -140,6 +140,15 @@
   list-style: none;
   font-weight: bold;
 }
+.mainnav ul li{
+  cursor: pointer;
+}
+.heading{
+  font-size: 38px;
+}
+.blogTitle{
+  font-size: 28px;
+}
 .myImage{
   border-radius: 10px;
 }
