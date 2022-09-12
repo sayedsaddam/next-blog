@@ -28,7 +28,7 @@ const Blog = () => {
                 <h3 className={styles.blogItemh3}>{blogitem.title}</h3>
               </Link>
               <small>By: {blogitem.author} on {Date()}</small>
-              <p className={styles.blogItemp}>{blogitem.content.substr(0, 140)}...</p>
+              <p className={styles.blogItemp}>{blogitem.metadesc.substr(0, 140)}...</p>
             </div>
           )
         })}
