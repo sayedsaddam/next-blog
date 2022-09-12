@@ -35,8 +35,8 @@ const Slug = (props) => {
 export async function getStaticPaths(){
    return{
       paths: [
-         {params: {slug: 'how-to-learn-javascript'}},
          {params: {slug: 'how-to-learn-flask'}},
+         {params: {slug: 'how-to-learn-javascript'}}, 
          {params: {slug: 'how-to-learn-nextjs'}}
       ],
       fallback: true // false or blocking
