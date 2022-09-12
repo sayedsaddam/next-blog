@@ -29,6 +29,9 @@ const Blog = () => {
               </Link>
               <small>By: {blogitem.author} on {Date()}</small>
               <p className={styles.blogItemp}>{blogitem.metadesc.substr(0, 140)}...</p>
+              <Link href={`/posts/${blogitem.slug}`}>
+                <button className={styles.btn}>Read more</button>
+              </Link>
             </div>
           )
         })}
