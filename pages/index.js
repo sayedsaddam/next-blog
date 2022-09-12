@@ -12,33 +12,37 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main className={styles.main}>
-        <h1 className={styles.title}>
-          Stacklag
-        </h1>
         <div className={styles.imagewrap}>
           <Image className={styles.myImage} src="/homepage.jfif" width={237} height={158} alt="NextJS blog" />
           {/* <img src="/homepage.jfif" width={237} height={158} alt="NextJS blog" /> */}
         </div>
+        <h1 className={styles.title}>
+          Stacklag
+        </h1>
         <p className={styles.description}>
           A blog being built in NextJS
         </p>
 
         <div className="blogs">
-          <h2 className={styles.heading}>Popular blogs</h2>
+          <h2 className={styles.h2}>Latest Blogs</h2>
           <div className="blogItem">
-            <h3 className={styles.blogTitle}>How to learn Javascript in 2022</h3>
+            <h3 className={styles.h3}>How to learn Javascript in 2022</h3>
             <p>Some content for the blog built with Next JS.</p>
+            <button className={styles.btn}>Read More</button>
           </div>
           <div className="blogItem">
-            <h3>How to learn Javascript in 2022</h3>
+            <h3 className={styles.h3}>How to learn Javascript in 2022</h3>
             <p>Some content for the blog built with Next JS.</p>
+            <button className={styles.btn}>Read More</button>
           </div>
           <div className="blogItem">
-            <h3>How to learn Javascript in 2022</h3>
+            <h3 className={styles.h3}>How to learn Javascript in 2022</h3>
             <p>Some content for the blog built with Next JS.</p>
+            <button className={styles.btn}>Read More</button>
           </div>
         </div>
       </main>
+      <footer className={styles.footer}></footer>
     </div>
   )
 }
