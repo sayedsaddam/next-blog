@@ -13,15 +13,12 @@ export default function Home() {
       </Head>
       <main className={styles.main}>
         <div className={styles.imagewrap}>
-          <Image className={styles.myImage} src="/homepage.jfif" width={237} height={158} alt="NextJS blog" />
+          <Image className={styles.myImage} src="/homepage.jfif" width={237} height={158} alt="Stacklag" />
           {/* <img src="/homepage.jfif" width={237} height={158} alt="NextJS blog" /> */}
         </div>
         <h1 className={styles.title}>
-          Stacklag
+          &lt;Stacklag/&gt;
         </h1>
-        <p className={styles.description}>
-          A blog being built in NextJS
-        </p>
 
         <div className="blogs">
           <h2 className={styles.h2}>Latest Blogs</h2>
