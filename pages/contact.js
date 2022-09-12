@@ -31,20 +31,20 @@ export const Contact = () => {
       <form onSubmit={handleSubmit}>
         <div className={styles.mb3}>
           <label htmlFor="name" className={styles.formlabel}>Enter your name</label>
-          <input type="text" value={name} onChange={event => setName(event.target.value)} id="name" name='name' />
+          <input className={styles.input} type="text" value={name} onChange={event => setName(event.target.value)} id="name" name='name' />
         </div>
         <div className={styles.mb3}>
           <label htmlFor="email" className={styles.formlabel}>Email address</label>
-          <input type="email" value={email} onChange={event => setEmail(event.target.value)} name='email' id="email" />
+          <input className={styles.input} type="email" value={email} onChange={event => setEmail(event.target.value)} name='email' id="email" />
           <div id="emailHelp" className="form-text">We'll never share your email with anyone else.</div>
         </div>
         <div className={styles.mb3}>
           <label htmlFor="phone" className={styles.formlabel}>Phone</label>
-          <input type="phone" value={phone} onChange={event => setPhone(event.target.value)} name='phone' id="phone" />
+          <input className={styles.input} type="phone" value={phone} onChange={event => setPhone(event.target.value)} name='phone' id="phone" />
         </div>
         <div className={styles.mb3}>
           <label htmlFor="desc">Elaborate your concern</label>
-          <textarea value={desc} onChange={event => setDesc(event.target.value)} placeholder="Write your concern here" name='desc' id="desc" />
+          <textarea className={styles.input} value={desc} onChange={event => setDesc(event.target.value)} placeholder="Write your concern here" name='desc' id="desc" />
         </div>
         <button type="submit" className="btn btn-primary">Submit</button>
       </form>
