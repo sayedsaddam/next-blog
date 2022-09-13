@@ -36,13 +36,14 @@ const Slug = (props) => {
 
 // getStaticPaths
 export async function getStaticPaths(){
-   return{
-      paths: [
-         {params: {slug: 'how-to-learn-flask'}},
-         {params: {slug: 'how-to-learn-javascript'}}, 
-         {params: {slug: 'how-to-learn-nextjs'}}
-      ],
-      fallback: true // false or blocking
+   let allB = await fs.promises.readdir(`blogdata`)
+   allB = allB.map((item) => {
+      return { params: { slug: item.split(".")[0] } }
+   })
+   console.log(allB)
+   return {
+      paths: allB,
+      fallback: true // flase or blocking
    }
 }
 // getStaticProps
