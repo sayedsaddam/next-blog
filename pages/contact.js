@@ -7,7 +7,7 @@ export const Contact = () => {
   const [desc, setDesc] = useState(undefined)
   const handleSubmit = (e) => {
     e.preventDefault()
-    console.log(name, phone, email, desc)
+    // console.log(name, phone, email, desc)
     const data = `{ "name" : "${name}", "phone": "${phone}", "email": "${email}", "desc": "${desc}" }`;
     fetch('http://localhost:3000/api/postcontact', {
       method: 'POST', // or 'PUT'
@@ -17,8 +17,8 @@ export const Contact = () => {
       body: JSON.stringify(data),
     })
     .then(response => response.text())
-    .then(data => {
-      console.log('Success: ', data)
+    .then(() => {
+      // console.log('Success: ', data)
       alert('Thanks for contacting us.')
     })
     .catch((error) => {
