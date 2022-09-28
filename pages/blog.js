@@ -17,7 +17,7 @@ const Blog = (props) => {
     setBlogs(data)
   }
   return (
-    <div className={styles.container}>
+    <div className='container mx-auto'>
       <main className={styles.main}>
         <InfiniteScroll
         dataLength={blogs.length}
@@ -37,7 +37,7 @@ const Blog = (props) => {
                 </Link>
                 <p className={styles.blogItemp}>{blogitem.metadesc.substr(0, 140)}...</p>
                 <Link href={`/posts/${blogitem.slug}`}>
-                  <button className={styles.btn}>Read More</button>
+                  <button className='bg-white text-black p-2 rounded-md mt-4 font-bold'>Read More...</button>
                 </Link>
               </div>
             )
