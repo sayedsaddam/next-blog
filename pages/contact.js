@@ -29,7 +29,7 @@ export const Contact = () => {
     <div className={styles.container}>
       <h1 className='font-extrabold text-3xl mt-10'>Contact Us</h1>
       <form onSubmit={handleSubmit}>
-        <div className={styles.mb3}>
+        <div className='mb-3'>
           <label htmlFor="name" className={styles.formlabel}>Enter your name</label>
           <input className={styles.input} type="text" value={name} onChange={event => setName(event.target.value)} id="name" name='name' />
         </div>
