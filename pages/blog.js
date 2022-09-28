@@ -31,14 +31,16 @@ const Blog = (props) => {
         }>
           {blogs.map((blogitem) => {
             return (
-              <div key={blogitem.slug}>
-                <Link href={`/posts/${blogitem.slug}`}>
-                  <h3 className={styles.blogItemh3}>{blogitem.title}</h3>
-                </Link>
-                <p className={styles.blogItemp}>{blogitem.metadesc.substr(0, 140)}...</p>
-                <Link href={`/posts/${blogitem.slug}`}>
-                  <button className='bg-white text-black p-2 rounded-md mt-4 font-bold'>Read More...</button>
-                </Link>
+              <div className="bg-white text-black rounded-md mb-4 p-5 container mx-auto">
+                <div key={blogitem.slug}>
+                  <Link href={`/posts/${blogitem.slug}`}>
+                    <h3 className='font-extrabold text-gray-400 text-4xl'>{blogitem.title}</h3>
+                  </Link>
+                  <p className='text-xl'>{blogitem.metadesc.substr(0, 140)}...</p>
+                  <Link href={`/posts/${blogitem.slug}`}>
+                    <button className='bg-gray-500 text-white py-1 px-2 rounded-md mt-4 font-bold  shadow-lg hover:bg-gray-700'>Read More...</button>
+                  </Link>
+                </div>
               </div>
             )
           })}
