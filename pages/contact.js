@@ -27,7 +27,7 @@ export const Contact = () => {
   }
   return (
     <div className={styles.container}>
-      <h1>Contact Us</h1>
+      <h1 className='font-extrabold text-3xl mt-10'>Contact Us</h1>
       <form onSubmit={handleSubmit}>
         <div className={styles.mb3}>
           <label htmlFor="name" className={styles.formlabel}>Enter your name</label>

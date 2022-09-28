@@ -1,23 +1,11 @@
-import { useState } from "react";
+import { NextPage } from "next"
+import Head from "next/head"
 
-function Header({title}){
-   return <h1>{title ? title : 'Default Title'}</h1>;
-}
 export default function Others() {
-   function handleClick(){
-      setLikes(likes + 1)
-   }
-   const names = ['Ada Lovelace', 'Grace Hopper', 'Margaret Hamilton'];
-   const [likes, setLikes] = useState(0);
    return (
-      <>
-         <Header title="Develop. Preview. Ship. " />
-         <ul>
-            {names.map((name) => (
-               <li key={name}>{name}</li>
-            ))}
-         </ul>
-         <button onClick={handleClick}>Like ({likes})</button>
-      </>
+      <div className="my-10 container mx-auto">
+         <h1 className="font-extrabold text-amber-400 text-4xl">Tailwind Installed</h1>
+         <p className="text-amber-100">Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit placeat doloremque fugit dignissimos excepturi quidem cupiditate nam consectetur sequi! Consectetur repudiandae quidem, soluta dolorem maiores id totam cupiditate nemo voluptatum.</p>
+      </div>
    )
 }
