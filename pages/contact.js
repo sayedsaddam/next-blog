@@ -29,7 +29,7 @@ export const Contact = () => {
     <div className={styles.container}>
       <h1 className='font-extrabold text-3xl mt-10'>Contact Us</h1>
       <form onSubmit={handleSubmit}>
-        <div className='mb-3'>
+        <div className={styles.mb3}>
           <label htmlFor="name" className={styles.formlabel}>Enter your name</label>
           <input className={styles.input} type="text" value={name} onChange={event => setName(event.target.value)} id="name" name='name' />
         </div>
@@ -46,7 +46,7 @@ export const Contact = () => {
           <label htmlFor="desc">Elaborate your concern</label>
           <textarea className={styles.input} value={desc} onChange={event => setDesc(event.target.value)} placeholder="Write your concern here" name='desc' id="desc" />
         </div>
-        <button type="submit" className="btn btn-primary">Submit</button>
+        <button type="submit" className="bg-white text-black p-2 rounded-md font-semibold">Submit</button>
       </form>
     </div>
   )
