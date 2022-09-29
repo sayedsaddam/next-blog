@@ -17,8 +17,8 @@ const Blog = (props) => {
     setBlogs(data)
   }
   return (
-    <div className='container mx-auto'>
-      <main className={styles.main}>
+    <div className='container mx-auto pt-10'>
+      <main className="">
         <InfiniteScroll
         dataLength={blogs.length}
         next={fetchData}
@@ -31,14 +31,14 @@ const Blog = (props) => {
         }>
           {blogs.map((blogitem) => {
             return (
-              <div className="bg-white text-black rounded-md mb-4 p-5 container mx-auto">
+              <div className="bg-black text-white mb-4 p-5 container mx-auto">
                 <div key={blogitem.slug}>
                   <Link href={`/posts/${blogitem.slug}`}>
-                    <h3 className='font-extrabold text-gray-400 text-4xl'>{blogitem.title}</h3>
+                    <h3 className='font-extrabold text-gray-300 text-4xl'>{blogitem.title}</h3>
                   </Link>
                   <p className='text-xl'>{blogitem.metadesc.substr(0, 140)}...</p>
                   <Link href={`/posts/${blogitem.slug}`}>
-                    <button className='bg-gray-500 text-white py-1 px-2 rounded-md mt-4 font-bold  shadow-lg hover:bg-gray-700'>Read More...</button>
+                    <button className='bg-gray-500 text-white py-2 px-6 mt-4 font-bold shadow-lg hover:bg-gray-700'>Read More...</button>
                   </Link>
                 </div>
               </div>

@@ -14,11 +14,11 @@ const Slug = (props) => {
    return (
       <div className='container mx-auto'>
          <main className={styles.main}>
-            <h1 className='font-semibold text-3xl'>{blog.title}</h1>
-            <small className='text-gray-300 font-light'>Author &raquo; {blog.author}</small>
+            <h1 className='font-bold text-4xl text-black '>{blog.title}</h1>
+            <small className='text-gray-800 font-light'>Author &raquo; {blog.author}</small>
             <hr />
             <div>
-               <p className='font-light'>{blog && <div dangerouslySetInnerHTML={createMarkup(blog.content)}></div>}</p>
+               <p className='font-light text-black'>{blog && <div dangerouslySetInnerHTML={createMarkup(blog.content)}></div>}</p>
             </div>
          </main>
       </div>
