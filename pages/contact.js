@@ -1,5 +1,4 @@
 import React, { useState } from 'react'
-import styles from '../styles/Contact.module.css'
 export const Contact = () => {
   const [name, setName] = useState(undefined)
   const [email, setEmail] = useState(undefined)
@@ -26,27 +25,23 @@ export const Contact = () => {
     })
   }
   return (
-    <div className={styles.container}>
-      <h1 className='font-extrabold text-3xl mt-10'>Contact Us</h1>
+    <div className='container mx-auto'>
+      <h1 className='font-extrabold text-3xl mt-10 text-black mb-10'>Contact Us</h1>
       <form onSubmit={handleSubmit}>
-        <div className={styles.mb3}>
-          <label htmlFor="name" className={styles.formlabel}>Enter your name</label>
-          <input className={styles.input} type="text" value={name} onChange={event => setName(event.target.value)} id="name" name='name' />
+        <div className='mb-3'>
+          <input className="text-base leading-4 p-4 relative z-0 w-full focus:outline-none text-gray-800 placeholder-gray-800 border" type="text" value={name} onChange={event => setName(event.target.value)} id="name" name='name' placeholder='Enter you name...' />
         </div>
-        <div className={styles.mb3}>
-          <label htmlFor="email" className={styles.formlabel}>Email address</label>
-          <input className={styles.input} type="email" value={email} onChange={event => setEmail(event.target.value)} name='email' id="email" />
-          <div id="emailHelp" className="form-text">We'll never share your email with anyone else.</div>
+        <div className='mb-3'>
+          <input className="text-base leading-4 p-4 relative z-0 w-full focus:outline-none text-gray-800 placeholder-gray-800 border" type="email" value={email} onChange={event => setEmail(event.target.value)} name='email' id="email" placeholder='Enter your email...' />
+          <div id="emailHelp" className="text-gray-500">We'll never share your email with anyone else.</div>
         </div>
-        <div className={styles.mb3}>
-          <label htmlFor="phone" className={styles.formlabel}>Phone</label>
-          <input className={styles.input} type="phone" value={phone} onChange={event => setPhone(event.target.value)} name='phone' id="phone" />
+        <div className='mb-3'>
+          <input className="text-base leading-4 p-4 relative z-0 w-full focus:outline-none text-gray-800 placeholder-gray-800 border" type="phone" value={phone} onChange={event => setPhone(event.target.value)} name='phone' id="phone" placeholder='Enter your phone...' />
         </div>
-        <div className={styles.mb3}>
-          <label htmlFor="desc">Elaborate your concern</label>
-          <textarea className={styles.input} value={desc} onChange={event => setDesc(event.target.value)} placeholder="Write your concern here" name='desc' id="desc" />
+        <div className='mb-3'>
+          <textarea className="text-base leading-4 p-4 relative z-0 w-full focus:outline-none text-gray-800 placeholder-gray-800 border" value={desc} onChange={event => setDesc(event.target.value)} placeholder="Write your concern here" name='desc' id="desc" />
         </div>
-        <button type="submit" className="bg-white text-black p-2 rounded-md font-semibold">Submit</button>
+        <button type="submit" className="bg-black text-white px-20 py-2 font-semibold">Submit</button>
       </form>
     </div>
   )
